@@ -4,10 +4,10 @@ import mongoose from 'mongoose';
 import morgan from 'morgan';
 import cors from 'cors';
 import { connectDB } from './config/dbConfig.js';
-const PORT=8080;
-// import ErrorHandler from "./utils/ErrorHandler.js"
+const PORT=4000;
+import ErrorHandler from "./utils/ErrorHandler.js"
 const app = express();
-// import authRouter from './routes/authRoute.js';
+import authRouter from './routes/authRoutes.js';
 // import categoriesRouter from "./routes/categoriesRoute.js"
 // import productRouter from "./routes/productRoute.js"
 // import adminRouter from "./routes/adminRoute.js"
@@ -24,7 +24,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 app.use(cors());
 
-// app.use("/api/v1/auth",authRouter);
+app.use("/api/v1/auth",authRouter);
 // app.use("/api/v1/categories",categoriesRouter);
 // app.use("/api/v1/product",productRouter);
 // app.use("/api/v1/admin",adminRouter);
@@ -102,6 +102,7 @@ app.get("/api", (req, res) => {
 
 
 app.listen(PORT,()=>{
-    console.log(`Server is running on port ${PORT}`.blue);
+  connectDB();
+    console.log(`Server is running on port ${PORT}`);
 })
 // https://www.youtube.com/watch?v=A_-fn_ij59cd
