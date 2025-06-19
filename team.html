@@ -1,398 +1,760 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <title>LiveActive Physiotherapy and Sports Injury Clinic</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
+<head>
+    <meta charset="utf-8">
+    <title>LiveActive Physiotherapy and Sports Injury Clinic</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet"> 
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-        <!-- Libraries Stylesheet -->
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
 
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-        <script>(function(w, d) { w.CollectId = "683d47524db59215f99a60f3"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async=true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
-        <link rel="icon" href="img/icon.png" type="image/x-icon" />
-    </head>
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- <script>(function (w, d) { w.CollectId = "683d47524db59215f99a60f3"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async = true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script> -->
+    <link rel="icon" href="img/icon.png" type="image/x-icon" />
+    <script src="teamData.js"></script>
 
-    <body>
+    <style>
+        /* AD */
+        /* .view-profile-btn {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 6px 16px;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 30px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 12px rgba(40, 167, 69, 0.2);
+        }
 
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+        .view-profile-btn:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(40, 167, 69, 0.35);
+            color: #fff;
+        } */
+
+
+        /* SN */
+        /* Button Styling */
+        .btn-view-profile {
+            position: relative;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        /* Icon Styling */
+        .btn-view-profile .btn-text {
+            margin-right: 8px;
+        }
+
+        .btn-view-profile .btn-icon {
+            position: absolute;
+            right: -100%;
+            transition: right 0.3s ease;
+        }
+
+        /* Hover Effects */
+        .btn-view-profile:hover {
+            background-color: #218838;
+        }
+
+        .btn-view-profile:hover .btn-icon {
+            right: 10px;
+        }
+
+        /* Focus and Active States */
+        .btn-view-profile:focus,
+        .btn-view-profile:active {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.5);
+        }
+
+        /* PB */
+        .btn-modern-glass {
+            background: rgba(255, 255, 255, 0.08);
+            color: #28a745;
+            border: 1px solid #28a745;
+            padding: 10px 26px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            backdrop-filter: blur(6px);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(40, 167, 69, 0.25);
+        }
+
+        .btn-modern-glass:hover {
+            background-color: #28a745;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(40, 167, 69, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0 align-items-center" style="height: 45px;">
+            <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                <div class="d-flex flex-wrap">
+                    <a href="#" class="text-light me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A
+                        Location</a>
+                    <a href="#" class="text-light me-4"><i
+                            class="fas fa-phone-alt text-primary me-2"></i>+01234567890</a>
+                    <a href="#" class="text-light me-0"><i
+                            class="fas fa-envelope text-primary me-2"></i>Example@gmail.com</a>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-flex align-items-center justify-content-end">
+                    <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-3"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-3"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-3"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-0"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
             </div>
         </div>
-        <!-- Spinner End -->
+    </div>
+    <!-- Topbar End -->
 
 
-        <!-- Topbar Start -->
-        <div class="container-fluid bg-dark px-5 d-none d-lg-block">
-            <div class="row gx-0 align-items-center" style="height: 45px;">
-                <div class="col-lg-8 text-center text-lg-start mb-lg-0">
-                    <div class="d-flex flex-wrap">
-                        <a href="#" class="text-light me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a>
-                        <a href="#" class="text-light me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+01234567890</a>
-                        <a href="#" class="text-light me-0"><i class="fas fa-envelope text-primary me-2"></i>Example@gmail.com</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 text-center text-lg-end">
-                    <div class="d-flex align-items-center justify-content-end">
-                        <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-3"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-0"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Topbar End -->
-
-
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.html" class="navbar-brand p-0">
-                    <!-- <h1 class="text-primary m-0"><i class="fas fa-star-of-life me-3"></i>LiveActive</h1> -->
-                    <img src="img/logoHd.png" alt="Logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Services</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="appointment.html" class="dropdown-item">Appointment</a>
-                                <a href="feature.html" class="dropdown-item">Features</a>
-                                <a href="blog.html" class="dropdown-item">Our Blog</a>
-                                <a href="team.html" class="dropdown-item active">Our Team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <!-- <a href="404.html" class="dropdown-item">404 Page</a> -->
-                            </div>
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0">
+                <!-- <h1 class="text-primary m-0"><i class="fas fa-star-of-life me-3"></i>LiveActive</h1> -->
+                <img src="img/logoHd.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="service.html" class="nav-item nav-link">Services</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="appointment.html" class="dropdown-item">Appointment</a>
+                            <a href="feature.html" class="dropdown-item">Features</a>
+                            <a href="blog.html" class="dropdown-item">Our Blog</a>
+                            <a href="team.html" class="dropdown-item active">Our Team</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <!-- <a href="404.html" class="dropdown-item">404 Page</a> -->
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact Us</a>
                     </div>
-                    <a href="#" class="btn rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0" style="background-color: #28a745;">Book Appointment</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact Us</a>
                 </div>
-            </nav>
-        </div>
-        <!-- Navbar End -->
+                <a href="#" class="btn rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0"
+                    style="background-color: #28a745;">Book Appointment</a>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
 
 
-        <!-- Header Start -->
-        <div class="container-fluid bg-breadcrumb">
-            <div class="container text-center py-5" style="max-width: 900px;">
-                <h3 class="text-white display-3 mb-4 wow fadeInDown" data-wow-delay="0.1s">Our Team</h1>
+    <!-- Header Start -->
+    <div class="container-fluid bg-breadcrumb">
+        <div class="container text-center py-5" style="max-width: 900px;">
+            <h3 class="text-white display-3 mb-4 wow fadeInDown" data-wow-delay="0.1s">Our Team</h1>
                 <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                     <li class="breadcrumb-item"><a href="#">Pages</a></li>
                     <li class="breadcrumb-item active text-primary">Team</li>
-                </ol>    
-            </div>
+                </ol>
         </div>
-        <!-- Header End -->
+    </div>
+    <!-- Header End -->
 
 
-        <!-- Team Start -->
-        <div class="container-fluid team py-5">
-            <div class="container py-5">
-                <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="sub-style">
-                        <h4 class="sub-title px-3 mb-0">Meet our team</h4>
-                    </div>
-                    <h1 class="display-3 mb-4">Physiotherapy Services from Professional Therapist</h1>
-                    <p class="mb-0">With years of hands-on experience and a passion for healing, our dedicated therapists work closely with each patient to deliver effective, evidence-based treatments. Whether you're recovering from injury or managing chronic pain, our team is here to support every step of your recovery.</p>
+    <!-- Team Start -->
+    <div class="container-fluid team py-5">
+        <div class="container py-5">
+            <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="sub-style">
+                    <h4 class="sub-title px-3 mb-0">Meet our team</h4>
                 </div>
-                <div class="row g-4 justify-content-center">
-
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
-                            <div class="team-img rounded-top h-100">
-                                <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
-                                 <img src="img/staff/Anuja.jpg" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
-                                <div class="team-icon d-flex justify-content-center">
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                                <h5>Anuja Dalvi</h5>
-                                <p class="mb-0">Founder & Consultant Physiotherapist</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
-                            <div class="team-img rounded-top h-100">
-                                <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
-                                 <img src="img/staff/niranjan.jpg" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
-                                <div class="team-icon d-flex justify-content-center">
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                                <h5>Niranjan Pandit</h5>
-                                <p class="mb-0">Co-Founder & Consultant Physiotherapist</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-
-                    
-
-
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
-                            <div class="team-img rounded-top h-100">
-                                <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
-                                 <img src="/img/staff/Devika.png" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
-                                <div class="team-icon d-flex justify-content-center">
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                                <h5>Devika Rele</h5>
-                                <p class="mb-0">Consultant Physiotherapist</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
-                            <div class="team-img rounded-top h-100">
-                                <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
-                                 <img src="img/staff/Stuti.png" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
-                                <div class="team-icon d-flex justify-content-center">
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                                <h5>Stuti Nadkarni</h5>
-                                <p class="mb-0">Consultant Physiotherapist</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
-                            <div class="team-img rounded-top h-100">
-                                <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
-                                 <img src="img/staff/Parita.png" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
-                                <div class="team-icon d-flex justify-content-center">
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                                <h5>Parita Berde</h5>
-                                <p class="mb-0">Consultant Physiotherapist</p>
-                            </div>
-                        </div>
-                    </div>
-
-                     <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
-                            <div class="team-img rounded-top h-100">
-                                <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
-                                 <img src="img/staff/Senthil.png" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
-                                <div class="team-icon d-flex justify-content-center">
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                                <h5>Senthil Parab</h5>
-                                <p class="mb-0">Consultant Physiotherapist</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
-                            <div class="team-img rounded-top h-100">
-                                <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
-                                 <img src="img/staff/Ansh.png" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
-                                <div class="team-icon d-flex justify-content-center">
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                                <h5>Ansh Raithatha</h5>
-                                <p class="mb-0">Consultant Physiotherapist</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
-                            <div class="team-img rounded-top h-100">
-                                <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
-                                 <img src="img/staff/Amogh.png" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
-                                <div class="team-icon d-flex justify-content-center">
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                                <h5>Amogh Bhagwat</h5>
-                                <p class="mb-0">Physiotherapist</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-                </div>
+                <h1 class="display-3 mb-4">Physiotherapy Services from Professional Therapist</h1>
+                <p class="mb-0">With years of hands-on experience and a passion for healing, our dedicated therapists
+                    work closely with each patient to deliver effective, evidence-based treatments. Whether you're
+                    recovering from injury or managing chronic pain, our team is here to support every step of your
+                    recovery.</p>
             </div>
-        </div>
-        <!-- Team End -->
+            <div class="row g-4 justify-content-center">
 
-
-        <!-- Footer Start -->
-        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-white mb-4">
-                                <!-- <i class="fas fa-star-of-life me-3"></i> -->
-                                 <i class="fas fa-running me-3"></i>
-                                LiveActive</h4>
-                            <p>
-                                At LiveActive Physiotherapy, we are dedicated to improving your quality of life by optimizing recovery and function. Our integrated approach combines manual therapy and exercises to accelerate recovery, prevent recurrence, and help you live actively.
-                            </p>
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-share fa-2x text-white me-2"></i>
-                                <a class="btn-square btn btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn-square btn btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn-square btn btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn-square btn btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
+                        <div class="team-img rounded-top h-100">
+                            <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
+                            <img src="img/staff/Anuja.jpg" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+                            <div class="team-icon d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Quick Links</h4>
-                            <a href="/about.html"><i class="fas fa-angle-right me-2"></i> About Us</a>
-                            <a href="/contact.html"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>
-                            <a href="/blog.html"><i class="fas fa-angle-right me-2"></i> Our Blog & News</a>
-                            <a href="/team.html"><i class="fas fa-angle-right me-2"></i> Our Team</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">LiveActive Services</h4>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> All Services</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Physiotherapy</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Diagnostics</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Manual Therapy</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Massage Therapy</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Rehabilitation</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Contact Info</h4>
-                            <a href=""><i class="fa fa-map-marker-alt me-2"></i>1, Jai Kutir, Taikalwadi, Manorama Nagarkar Marg, Mumbai, Maharashtra 400016</a>
-                            <a href=""><i class="fas fa-envelope me-1"></i>liveactivephysiotherapy@gmail.com</a>
-                            <!-- <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a> -->
-                            <a href=""><i class="fas fa-phone me-2"></i> +9107506 040780</a>
-                            <!-- <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a> -->
+                        <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
+                            <h5>Anuja Dalvi</h5>
+                            <p class="mb-0">Founder & Consultant Physiotherapist</p>
+                            <button class="btn-modern-glass" data-bs-toggle="modal" data-bs-target="#anujaModal">
+                                <i class="fas fa-user-md me-2"></i>
+                                View Profile
+                            </button>
+                            <!-- <button class="profile-btn" data-bs-toggle="modal" data-bs-target="#anujaModal">
+  <i class="fas fa-user-circle me-1"></i> View Profile
+</button> -->
+
+
                         </div>
                     </div>
                 </div>
+
+
+
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
+                        <div class="team-img rounded-top h-100">
+                            <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
+                            <img src="img/staff/niranjan.jpg"
+                                class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+                            <div class="team-icon d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
+                            <h5>Niranjan Pandit</h5>
+                            <p class="mb-0">Co-Founder & Consultant Physiotherapist</p>
+                            <button class="btn-modern-glass" data-bs-toggle="modal" data-bs-target="#niranjanModal">
+                                <i class="fas fa-user-md me-2"></i>
+                                View Profile
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
+                        <div class="team-img rounded-top h-100">
+                            <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
+                            <img src="/img/staff/Devika.png" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+                            <div class="team-icon d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
+                            <h5>Devika Rele</h5>
+                            <p class="mb-0">Consultant Physiotherapist</p>
+                            <button class="btn-modern-glass" data-bs-toggle="modal" data-bs-target="#devikaModal">
+                                <i class="fas fa-user-md me-2"></i>
+                                View Profile
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
+                        <div class="team-img rounded-top h-100">
+                            <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
+                            <img src="img/staff/Stuti.png" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+                            <div class="team-icon d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
+                            <h5>Stuti Nadkarni</h5>
+                            <p class="mb-0">Consultant Physiotherapist</p>
+                            <button class="btn-modern-glass" data-bs-toggle="modal" data-bs-target="#stutiModal">
+                                <i class="fas fa-user-md me-2"></i>
+                                View Profile
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
+                        <div class="team-img rounded-top h-100">
+                            <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
+                            <img src="img/staff/Parita.png" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+                            <div class="team-icon d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
+                            <h5>Parita Berde</h5>
+                            <p class="mb-0">Consultant Physiotherapist</p>
+                            <button class="btn-modern-glass" data-bs-toggle="modal" data-bs-target="#paritaModal">
+                                <i class="fas fa-user-md me-2"></i>
+                                View Profile
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
+                        <div class="team-img rounded-top h-100">
+                            <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
+                            <img src="img/staff/Senthil.png" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+                            <div class="team-icon d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
+                            <h5>Senthil Parab</h5>
+                            <p class="mb-0">Consultant Physiotherapist</p>
+                            <button class="btn-modern-glass" data-bs-toggle="modal" data-bs-target="#senthilModal">
+                                <i class="fas fa-user-md me-2"></i>
+                                View Profile
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
+                        <div class="team-img rounded-top h-100">
+                            <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
+                            <img src="img/staff/Ansh.png" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+                            <div class="team-icon d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
+                            <h5>Ansh Raithatha</h5>
+                            <p class="mb-0">Consultant Physiotherapist</p>
+
+                            <button class="btn-modern-glass" data-bs-toggle="modal" data-bs-target="#anshModal">
+                                <i class="fas fa-user-md me-2"></i>
+                                View Profile
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
+                        <div class="team-img rounded-top h-100">
+                            <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
+                            <img src="img/staff/Amogh.png" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+                            <div class="team-icon d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
+                            <h5>Amogh Bhagwat</h5>
+                            <p class="mb-0">Physiotherapist</p>
+                            <button class="btn-modern-glass" data-bs-toggle="modal" data-bs-target="#amoghModal">
+                                <i class="fas fa-user-md me-2"></i>
+                                View Profile
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
+                        <div class="team-img rounded-top h-100">
+                            <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
+                            <img src="data:image/jpeg;base64,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"
+                                class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+                            <div class="team-icon d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
+                            <h5>Pallavi Asnani</h5>
+                            <p class="mb-0">Physiotherapist</p>
+                            <button class="btn-modern-glass" data-bs-toggle="modal" data-bs-target="#pallaviModal">
+                                <i class="fas fa-user-md me-2"></i>
+                                View Profile
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
+                        <div class="team-img rounded-top h-100">
+                            <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
+                            <img src="/img/staff/Rahul.png"
+                                class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+                            <div class="team-icon d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
+                            <h5>Rahul Zalte</h5>
+                            <p class="mb-0">Physiotherapist</p>
+                            <button class="btn-modern-glass" data-bs-toggle="modal" data-bs-target="#rahulModal">
+                                <i class="fas fa-user-md me-2"></i>
+                                View Profile
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
+                        <div class="team-img rounded-top h-100">
+                            <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
+                            <img src="/img/staff/Khushboo.png"
+                                class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+                            <div class="team-icon d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
+                            <h5>Khushboo Pathak</h5>
+                            <p class="mb-0">Physiotherapist</p>
+                            <button class="btn-modern-glass" data-bs-toggle="modal" data-bs-target="#khushbooModal">
+                                <i class="fas fa-user-md me-2"></i>
+                                View Profile
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
+                        <div class="team-img rounded-top h-100">
+                            <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
+                            <img src="/img/staff/Ratnesh.png"
+                                class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+                            <div class="team-icon d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
+                            <h5>Ratnesh Jathar</h5>
+                            <p class="mb-0">Physiotherapist</p>
+                            <button class="btn-modern-glass" data-bs-toggle="modal" data-bs-target="#ratneshModal">
+                                <i class="fas fa-user-md me-2"></i>
+                                View Profile
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
             </div>
         </div>
-        <!-- Footer End -->
-        
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright py-4" style="background-color: #222; color: #ddd;">
-            <div class="container text-center">
-                <div class="row g-4 align-items-center justify-content-center">
-                    <div class="col-12">
-                        <span class="text-light">
-                            <i class="fas fa-copyright me-2"></i>
-                            <a href="#" class="text-light fw-bold">@LiveActivePhysiotherapy</a> | All rights reserved.
-                        </span>
+    </div>
+    <!-- Team End -->
+
+
+
+
+
+    <!-- Modal -->
+    <div id="team-modals"></div>
+
+    <script>
+        const modalContainer = document.getElementById('team-modals');
+
+modalData.forEach(member => {
+  const modalHTML = `
+    <div class="modal fade" id="${member.id}" tabindex="-1" aria-labelledby="${member.id}Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="${member.id}Label">${member.name} – ${member.title}</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row align-items-center">
+              <div class="col-md-4 mb-3 mb-md-0">
+                <img src="${member.image}" alt="${member.name}" class="img-fluid rounded">
+              </div>
+              <div class="col-md-8">  
+                <p><strong>Qualifications:</strong> ${member.qualifications}</p>
+                <p><strong>Experience:</strong> ${member.experience}</p>
+                <p><strong>Specializations:</strong> ${member.specializations}</p>
+                <p><strong>Approach:</strong> ${member.approach}</p>
+                <p><strong>Location:</strong> ${member.location}</p>
+                <p><strong>LinkedIn:</strong> <a href="${member.linkedin}" target="_blank">${member.linkedin}</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+  modalContainer.innerHTML += modalHTML;
+});
+
+    </script>
+
+
+
+
+
+
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-white mb-4">
+                            <!-- <i class="fas fa-star-of-life me-3"></i> -->
+                            <i class="fas fa-running me-3"></i>
+                            LiveActive
+                        </h4>
+                        <p>
+                            At LiveActive Physiotherapy, we are dedicated to improving your quality of life by
+                            optimizing recovery and function. Our integrated approach combines manual therapy and
+                            exercises to accelerate recovery, prevent recurrence, and help you live actively.
+                        </p>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-share fa-2x text-white me-2"></i>
+                            <a class="btn-square btn btn-primary text-white rounded-circle mx-1" href=""><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="btn-square btn btn-primary text-white rounded-circle mx-1" href=""><i
+                                    class="fab fa-twitter"></i></a>
+                            <a class="btn-square btn btn-primary text-white rounded-circle mx-1" href=""><i
+                                    class="fab fa-instagram"></i></a>
+                            <a class="btn-square btn btn-primary text-white rounded-circle mx-1" href=""><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </div>
                     </div>
-                    <div class="col-12">
-                        <span class="text-light">Designed by 
-                            <!-- <a class="text-primary fw-bold border-bottom" target="_blank" href="https://www.linkedin.com/in/rahul-gupta-62ba0121b/">Rahul Gupta</a> -->
-                        </span>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4 text-white">Quick Links</h4>
+                        <a href="/about.html"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                        <a href="/contact.html"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
+                        <a href=""><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
+                        <a href=""><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>
+                        <a href="/blog.html"><i class="fas fa-angle-right me-2"></i> Our Blog & News</a>
+                        <a href="/team.html"><i class="fas fa-angle-right me-2"></i> Our Team</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4 text-white">LiveActive Services</h4>
+                        <a href=""><i class="fas fa-angle-right me-2"></i> All Services</a>
+                        <a href=""><i class="fas fa-angle-right me-2"></i> Physiotherapy</a>
+                        <a href=""><i class="fas fa-angle-right me-2"></i> Diagnostics</a>
+                        <a href=""><i class="fas fa-angle-right me-2"></i> Manual Therapy</a>
+                        <a href=""><i class="fas fa-angle-right me-2"></i> Massage Therapy</a>
+                        <a href=""><i class="fas fa-angle-right me-2"></i> Rehabilitation</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4 text-white">Contact Info</h4>
+                        <a href=""><i class="fa fa-map-marker-alt me-2"></i>1, Jai Kutir, Taikalwadi, Manorama Nagarkar
+                            Marg, Mumbai, Maharashtra 400016</a>
+                        <a href=""><i class="fas fa-envelope me-1"></i>liveactivephysiotherapy@gmail.com</a>
+                        <!-- <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a> -->
+                        <a href=""><i class="fas fa-phone me-2"></i> +9107506 040780</a>
+                        <!-- <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a> -->
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Copyright End -->
+    </div>
+    <!-- Footer End -->
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4" style="background-color: #222; color: #ddd;">
+        <div class="container text-center">
+            <div class="row g-4 align-items-center justify-content-center">
+                <div class="col-12">
+                    <span class="text-light">
+                        <i class="fas fa-copyright me-2"></i>
+                        <a href="#" class="text-light fw-bold">@LiveActivePhysiotherapy</a> | All rights reserved.
+                    </span>
+                </div>
+                <div class="col-12">
+                    <span class="text-light">Designed by
+                        <!-- <a class="text-primary fw-bold border-bottom" target="_blank" href="https://www.linkedin.com/in/rahul-gupta-62ba0121b/">Rahul Gupta</a> -->
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
 
-        
-        <!-- JavaScript Libraries -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-        
-    </body>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+</body>
 
 </html>

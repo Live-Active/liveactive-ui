@@ -1,0 +1,148 @@
+
+const modalData = [
+  {
+    id: "anujaModal",
+    name: "Anuja Dalvi",
+    title: "Founder & Consultant Physiotherapist",
+    image: "img/staff/Anuja.jpg",
+    qualifications: "MPT (Orthopedics), Certified Manual Therapist",
+    experience: "Over 15 years of experience in musculoskeletal physiotherapy and sports rehab.",
+    specializations: "Sports injuries, orthopedic rehab, spinal alignment therapy.",
+    approach: "Holistic, functional recovery with evidence-based practice.",
+    location: "Mumbai, LiveActive Physiotherapy Clinic",
+    linkedin: "https://linkedin.com/in/anuja-dalvi"
+  },
+  {
+    id: "niranjanModal",
+    name: "Niranjan Pandit",
+    title: "Co-Founder & Consultant Physiotherapist",
+    image: "img/staff/niranjan.jpg",
+    qualifications: "MPT in Sports Physiotherapy",
+    experience: "10+ years of experience in orthopedic and sports rehab.",
+    specializations: "Knee injuries, strength training, pre & post-op rehab.",
+    approach: "Patient-centric and movement-based therapy.",
+    location: "Mumbai, LiveActive Physiotherapy Clinic",
+    linkedin: "#"
+  },
+    {
+    id: "devikaModal",
+    name: "Devika Rele",
+    title: "Consultant Physiotherapist",
+    image: "img/staff/devika.png",
+    qualifications: "MPT in Sports Physiotherapy",
+    experience: "10+ years of experience in orthopedic and sports rehab.",
+    specializations: "Knee injuries, strength training, pre & post-op rehab.",
+    approach: "Patient-centric and movement-based therapy.",
+    location: "Mumbai, LiveActive Physiotherapy Clinic",
+    linkedin: "#"
+  },
+    {
+    id: "stutiModal",
+    name: "Stuti Nadkarni",
+    title: "Consultant Physiotherapist",
+    image: "img/staff/stuti.png",
+    qualifications: "MPT in Sports Physiotherapy",
+    experience: "10+ years of experience in orthopedic and sports rehab.",
+    specializations: "Knee injuries, strength training, pre & post-op rehab.",
+    approach: "Patient-centric and movement-based therapy.",
+    location: "Mumbai, LiveActive Physiotherapy Clinic",
+    linkedin: "#"
+  },
+    {
+    id: "paritaModal",
+    name: "Parita Berde",
+    title: "Consultant Physiotherapist",
+    image: "img/staff/parita.png",
+    qualifications: "BPTh (KEM, Mumbai)",
+    experience: "2+ years of experience in orthopedic and sports rehab.",
+    specializations: "Knee injuries, strength training, pre & post-op rehab.",
+    approach: "Patient-centric and movement-based therapy.",
+    location: "Mumbai, LiveActive Physiotherapy Clinic",
+    linkedin: "#"
+  },
+  {
+    id: "senthilModal",
+    name: "Senthil Parab",
+    title: "Consultant Physiotherapist",
+    image: "img/staff/senthil.png",
+    qualifications: "BPTh (KEM, Mumbai)",
+    experience: "2+ years of experience in orthopedic and sports rehab.",
+    specializations: "Knee injuries, strength training, pre & post-op rehab.",
+    approach: "Patient-centric and movement-based therapy.",
+    location: "Mumbai, LiveActive Physiotherapy Clinic",
+    linkedin: "#"
+  },
+  {
+    id: "anshModal",
+    name: "Ansh Raithatha",
+    title: "Consultant Physiotherapist",
+    image: "img/staff/senthil.png",
+    qualifications: "BPTh (KEM, Mumbai)",
+    experience: "2+ years of experience in orthopedic and sports rehab.",
+    specializations: "Knee injuries, strength training, pre & post-op rehab.",
+    approach: "Patient-centric and movement-based therapy.",
+    location: "Mumbai, LiveActive Physiotherapy Clinic",
+    linkedin: "#"
+  },
+  {
+    id: "amoghModal",
+    name: "Amogh Bhagwat",
+    title: "Consultant Physiotherapist",
+    image: "img/staff/Amogh.png",
+    qualifications: "BPTh (KEM, Mumbai)",
+    experience: "2+ years of experience in orthopedic and sports rehab.",
+    specializations: "Knee injuries, strength training, pre & post-op rehab.",
+    approach: "Patient-centric and movement-based therapy.",
+    location: "Mumbai, LiveActive Physiotherapy Clinic",
+    linkedin: "#"
+  },
+  {
+    id: "pallaviModal",
+    name: "Pallavi Asnani",
+    title: "Consultant Physiotherapist",
+    image: "img/staff/female.png",
+    qualifications: "BPTh (K.J. Somiya, Mumbai)",
+    experience: "1+ years of experience in orthopedic and sports rehab.",
+    specializations: "Shoulder & Ankle injuries, Female Strength Training, Pre & Post-op Rehab.",
+    approach: "Patient-centric and movement-based therapy.",
+    location: "Mumbai, LiveActive Physiotherapy Clinic",
+    linkedin: "#"
+  },
+  {
+    id: "rahulModal",
+    name: "Rahul Zalte",
+    title: "Consultant Physiotherapist",
+    image: "img/staff/Rahul.png",
+    qualifications: "MPTh & BPTh (KEM & MGM, Mumbai)",
+    experience: "2.5+ years of experience in orthopedic and sports rehab.",
+    specializations: "Sports injuries, Strength Training, Pre & Post-op Rehab.",
+    approach: "Patient-centric and movement-based therapy.",
+    location: "Navy Mumbai, LiveActive Physiotherapy Clinic",
+    linkedin: "#"
+  },
+  {
+    id: "khushbooModal",
+    name: "Khushboo Pathak",
+    title: "Consultant Physiotherapist",
+    image: "img/staff/Khushboo.png",
+    qualifications: "BPTh (RGPV, Bhopal)",
+    experience: "1 years of experience in orthopedic and sports rehab.",
+    specializations: "Knee & Back Injuries, Strength Training, Pre & Post-op Rehab.",
+    approach: "Patient-centric and movement-based therapy.",
+    location: "Mumbai, LiveActive Physiotherapy Clinic",
+    linkedin: "#"
+  },
+   {
+    id: "ratneshModal",
+    name: "Ratnesh Jathar",
+    title: "Consultant Physiotherapist",
+    image: "img/staff/Ratnesh.png",
+    qualifications: "BPTh (RGPV, Bhopal)",
+    experience: "1+ years of experience in orthopedic and sports rehab.",
+    specializations: "Knee & Back Injuries, Strength Training, Pre & Post-op Rehab.",
+    approach: "Patient-centric and movement-based therapy.",
+    location: "Mumbai, LiveActive Physiotherapy Clinic",
+    linkedin: "#"
+  },
+  
+];
