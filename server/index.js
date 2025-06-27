@@ -8,6 +8,7 @@ const PORT=4000;
 import ErrorHandler from "./utils/ErrorHandler.js"
 const app = express();
 import authRouter from './routes/authRoutes.js';
+import projectRouter from './routes/projectRoutes.js'
 // import categoriesRouter from "./routes/categoriesRoute.js"
 // import productRouter from "./routes/productRoute.js"
 // import adminRouter from "./routes/adminRoute.js"
@@ -25,6 +26,7 @@ app.use(morgan('dev'));
 app.use(cors());
 
 app.use("/api/v1/auth",authRouter);
+app.use("/api/v1",projectRouter);
 // app.use("/api/v1/categories",categoriesRouter);
 // app.use("/api/v1/product",productRouter);
 // app.use("/api/v1/admin",adminRouter);

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Referral Letter Generator</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .form-section {
+      max-width: 600px;
+      margin-bottom: 40px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    #pdf-content {
+      display: none;
+      padding: 40px;
+      font-size: 16px;
+      width: 700px;
+    }
+    .logo {
+      width: 160px;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 12px;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-section">
+    <h2>Generate Referral Letter</h2>
+
+    <label>Patient Full Name</label>
+    <input type="text" id="name" />
+
+    <label>Age & Gender</label>
+    <input type="text" id="ageGender" placeholder="e.g. 44/M" />
+
+    <label>Symptoms Description</label>
+    <textarea id="symptoms" rows="4" placeholder="e.g. Right hip and groin pain..."></textarea>
+
+    <button onclick="generatePDF()">Generate PDF</button>
+  </div>
+
+  <!-- Hidden PDF Content -->
+  <div id="pdf-content">
+    <img src="https://www.liveactive.co.in/img/logoHd.png" class="logo" />
+
+    <p><strong>Anuja Dalvi</strong><br>
+    Master of Musculoskeletal & Sports Physiotherapy – Australia<br>
+    Consultant Physiotherapist, Sports & Manual therapist</p>
+
+    <p><strong>Niranjan Pandit</strong><br>
+    Master of Musculoskeletal Physiotherapy – K.E.M. Hospital, Mumbai<br>
+    Consultant Physiotherapist, Sports & Manual therapist</p>
+
+    <p><strong>To,<br>The Radiologist,</strong></p>
+
+    <p id="letter-body"></p>
+
+    <p>Please do the needful.</p><br>
+
+    <p>For,<br><strong>Dr. Niranjan Pandit</strong><br>
+    BPTh (Mum) MPTh (Mum), CMP MIAP<br>
+    Consultant Physiotherapist<br>
+    Sports and Manual Therapist<br>
+    IAP Reg. No. L-16561</p>
+
+    <div class="footer">
+      Clinic address: 1/Ground Floor, Jai Kutir, Taikalwadi, Near Starcity Cinema, Mumbai – 400 016<br>
+      Mobile: +91 7506040780<br>
+      E-mail: liveactivephysiotherapy@gmail.com<br>
+      Instagram: @physio_liveactive
+    </div>
+  </div>
+
+  <script>
+    function generatePDF() {
+      const name = document.getElementById('name').value;
+      const ageGender = document.getElementById('ageGender').value;
+      const symptoms = document.getElementById('symptoms').value;
+
+      const body = `Referring Mr./Ms. <strong>${name}</strong> (${ageGender}), presented with ${symptoms}. Requesting to perform MRI of the affected area to rule out any intraarticular pathology.`;
+
+      document.getElementById('letter-body').innerHTML = body;
+
+      const element = document.getElementById('pdf-content');
+
+      html2pdf().set({
+        margin: 1,
+        filename: `${name.replace(/\s/g, '_')}_Referral_Letter.pdf`,
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+      }).from(element).toPdf().get('pdf').then(function(pdf) {
+        window.open(pdf.output('bloburl'), '_blank');
+      });
+    }
+  </script>
+
+</body>
+</html>
+
+
