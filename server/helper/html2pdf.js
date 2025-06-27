@@ -1,4 +1,11 @@
 import puppeteer from "puppeteer";
+import fs from "fs";
+import path from "path";
+
+import { fileURLToPath } from 'url';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+
 
 /**
  * Generates a PDF Buffer using Puppeteer.
@@ -6,10 +13,15 @@ import puppeteer from "puppeteer";
  * @returns {Buffer} PDF file buffer
  */
 export const generatePDF = async (data) => {
-  const { name, ageGender, symptoms, joint = "the affected area",testType  } = data;
-  const formattedDate = new Date().toLocaleDateString("en-GB");
+    const { name, ageGender, symptoms, joint = "the affected area", testType } = data;
+    const formattedDate = new Date().toLocaleDateString("en-GB");
 
-  const html = `
+    const signaturePath = path.join(__dirname, "../utils/signature.png");
+    const signatureImage = fs.readFileSync(signaturePath).toString("base64");
+    const signatureSrc = `data:image/png;base64,${signatureImage}`;
+
+
+    const html = `
     <html>
       <head>
         <style>
@@ -61,6 +73,19 @@ export const generatePDF = async (data) => {
             padding-top: 10px;
             text-align: center;
           }
+          .signature-block { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: flex-start; 
+  margin-top: 30px; 
+}
+
+.signature-img { 
+  height: 40px;  /* ↓ chhota kiya */
+  width: auto;   /* Maintain aspect ratio */
+  margin-top: -10px; 
+}
+
         </style>
       </head>
       <body>
@@ -100,6 +125,18 @@ export const generatePDF = async (data) => {
           <p>Please do the needful.</p>
           <br />
           <p>Regards,<br />Team LiveActive</p>
+
+
+          <div class="signature-block">
+  <div class="sign-left">
+    <p>Please do the needful.</p>
+    <br />
+    <p>Regards,<br />Team LiveActive</p>
+  </div>
+  <div class="sign-right">
+<img src="${signatureSrc}" alt="Signature" class="signature-img" style="width: 200px; height: auto;" />
+  </div>
+</div>
         </div>
 
         <div class="footer">
@@ -115,22 +152,22 @@ export const generatePDF = async (data) => {
 
 
 
-  try {
-    const browser = await puppeteer.launch({ headless: "new" }); // adjust for hosting if needed
-    const page = await browser.newPage();
-    await page.setContent(html, { waitUntil: "networkidle0" });
+    try {
+        const browser = await puppeteer.launch({ headless: "new" }); // adjust for hosting if needed
+        const page = await browser.newPage();
+        await page.setContent(html, { waitUntil: "networkidle0" });
 
-    const pdfBuffer = await page.pdf({
-      format: "A4",
-      printBackground: true,
-      margin: { top: "40px", bottom: "40px", left: "40px", right: "40px" }
-    });
+        const pdfBuffer = await page.pdf({
+            format: "A4",
+            printBackground: true,
+            margin: { top: "40px", bottom: "40px", left: "40px", right: "40px" }
+        });
 
-    await browser.close();
-    return pdfBuffer;
+        await browser.close();
+        return pdfBuffer;
 
-  } catch (error) {
-    console.error("PDF generation failed:", error);
-    throw new Error("Failed to generate PDF");
-  }
+    } catch (error) {
+        console.error("PDF generation failed:", error);
+        throw new Error("Failed to generate PDF");
+    }
 };
