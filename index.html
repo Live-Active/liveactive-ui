@@ -1026,7 +1026,44 @@
         <!-- Copyright End -->
 
         <!-- Back to Top -->
-        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>  
+        
+        <!-- for Cookies -->
+        <!-- <div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #ccc; padding: 20px; display: flex; justify-content: space-between; align-items: center; z-index: 9999; font-family: sans-serif;">
+  <div>
+    <strong>We value your privacy</strong>
+    <p style="margin: 5px 0;">We use cookies to enhance your browsing experience, serve personalised ads or content, and analyse our traffic. By clicking "Accept All", you consent to our use of cookies. <a href="/cookie-policy" style="color: #007bff;">Cookie Policy</a></p>
+  </div>
+  <div style="display: flex; gap: 10px;">
+    <button onclick="acceptCookies()" style="background: red; color: white; border: none; padding: 10px 15px; cursor: pointer;">Accept All</button>
+    <button onclick="rejectCookies()" style="border: 1px solid red; background: none; color: red; padding: 10px 15px; cursor: pointer;">Reject All</button>
+    <button onclick="customiseCookies()" style="border: 1px solid red; background: none; color: red; padding: 10px 15px; cursor: pointer;">Customise</button>
+  </div>
+</div>
+
+<script>
+  // Show only if not already accepted/rejected
+  window.onload = function () {
+    if (!localStorage.getItem("cookieConsent")) {
+      document.getElementById("cookie-banner").style.display = "flex";
+    }
+  };
+
+  function acceptCookies() {
+    localStorage.setItem("cookieConsent", "accepted");
+    document.getElementById("cookie-banner").style.display = "none";
+  }
+
+  function rejectCookies() {
+    localStorage.setItem("cookieConsent", "rejected");
+    document.getElementById("cookie-banner").style.display = "none";
+  }
+
+  function customiseCookies() {
+    alert("Customise options not yet implemented.");
+  }
+</script> -->
+
 
         
         <!-- JavaScript Libraries -->
