@@ -695,13 +695,13 @@
                                 <form id="appointment-form-data">
                                 <div class="row gy-3 gx-4">
                                     <div class="col-xl-6">
-                                        <input type="text" name="from_name" class="form-control py-3 border-primary bg-transparent text-black" placeholder="Full Name">
+                                        <input type="text" name="from_name" class="form-control py-3 border-primary bg-transparent text-black" placeholder="Full Name" required>
                                     </div>
                                     <div class="col-xl-6">
-                                        <input type="phone" name="contact_number" class="form-control py-3 border-primary bg-transparent" placeholder="Contact">
+                                        <input type="phone" name="contact_number" class="form-control py-3 border-primary bg-transparent" placeholder="Contact" required>
                                     </div>
                                     <div class="col-xl-6">
-                                        <input type="email" name="reply_to" class="form-control py-3 border-primary bg-transparent text-black" placeholder="Email">
+                                        <input type="email" name="reply_to" class="form-control py-3 border-primary bg-transparent text-black" placeholder="Email" required>
                                     </div>
                                     
                                     <!-- <div class="col-xl-6">
@@ -712,10 +712,10 @@
                                         </select>
                                     </div> -->
                                     <div class="col-xl-6">
-                                        <input type="date"name="appointment_date" class="form-control py-3 border-primary bg-transparent">
+                                        <input type="date"name="appointment_date" class="form-control py-3 border-primary bg-transparent" placeholder="Appointment Date" required>
                                     </div>
                                     <div class="col-xl-6">
-                                        <select name="service" class="form-select py-3 border-primary bg-transparent" aria-label="Default select example">
+                                        <select name="service" class="form-select py-3 border-primary bg-transparent" aria-label="Default select example" required>
                                             <option selected>Select Service</option>
                                             <option value="Physiotherapy Consultant">Physiotherapy Consultant</option>
                                             <option value="Musculoskeletal (MSK) Screening">Musculoskeletal (MSK) Screening</option>
@@ -724,7 +724,7 @@
                                         </select>                                        
                                     </div>
                                     <div class="col-xl-6">
-                                        <select name="branch" class="form-select py-3 border-primary bg-transparent" aria-label="Default select example">
+                                        <select name="branch" class="form-select py-3 border-primary bg-transparent" aria-label="Default select example" required>
                                             <option selected>Preferred Branch</option>
                                             <option value="Dadar">Dadar</option>
                                             <option value="Bandra">Bandra</option>
