@@ -1229,7 +1229,7 @@
 <script>
   // Initialize EmailJS with your Public Key
   (function () {
-    emailjs.init("wBDoMmdw8X9Q7mv7Q"); 
+    emailjs.init("EMAIL_PUBLIC_KEY"); //Public Key
   })();
 
   // Form submission
@@ -1238,7 +1238,7 @@
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    emailjs.sendForm("service_9dvvfga", "template_5x3e6zb", this)
+    emailjs.sendForm("EMAIL_SERVICE_ID", "EMAIL_TEMPLATE_ID", this)  //Service ID and Template ID
       .then(function () {
         alert("✅ Appointment request sent successfully!");
         form.reset();
