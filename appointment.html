@@ -169,16 +169,17 @@
                         <div class="appointment-form rounded p-5">
                             <p class="fs-4 text-uppercase text-primary">Get In Touch</p>
                             <h1 class="display-5 mb-4">Get Appointment</h1>
-                            <form>
+                            <!-- <form action="https://formsubmit.co/liveactivephysiotherapy@gmail.com" method="POST"> -->
+                                <form id="appointment-form-data">
                                 <div class="row gy-3 gx-4">
                                     <div class="col-xl-6">
-                                        <input type="text" class="form-control py-3 border-primary bg-transparent text-black" placeholder="Full Name">
+                                        <input type="text" name="from_name" class="form-control py-3 border-primary bg-transparent text-black" placeholder="Full Name" required>
                                     </div>
                                     <div class="col-xl-6">
-                                        <input type="phone" class="form-control py-3 border-primary bg-transparent" placeholder="Contact">
+                                        <input type="phone" name="contact_number" class="form-control py-3 border-primary bg-transparent" placeholder="Contact" required>
                                     </div>
                                     <div class="col-xl-6">
-                                        <input type="email" class="form-control py-3 border-primary bg-transparent text-black" placeholder="Email">
+                                        <input type="email" name="reply_to" class="form-control py-3 border-primary bg-transparent text-black" placeholder="Email" required>
                                     </div>
                                     
                                     <!-- <div class="col-xl-6">
@@ -189,30 +190,30 @@
                                         </select>
                                     </div> -->
                                     <div class="col-xl-6">
-                                        <input type="date" class="form-control py-3 border-primary bg-transparent">
+                                        <input type="date"name="appointment_date" class="form-control py-3 border-primary bg-transparent" placeholder="Appointment Date" required>
                                     </div>
                                     <div class="col-xl-6">
-                                        <select class="form-select py-3 border-primary bg-transparent" aria-label="Default select example">
+                                        <select name="service" class="form-select py-3 border-primary bg-transparent" aria-label="Default select example" required>
                                             <option selected>Select Service</option>
-                                            <option value="1">Physiotherapy Consultant</option>
-                                            <option value="2">Musculoskeletal (MSK) Screening</option>
-                                            <option value="3">Home Visit for Physiotherapy</option>
-                                            <option value="4">Sports Massage Therapy</option>
+                                            <option value="Physiotherapy Consultant">Physiotherapy Consultant</option>
+                                            <option value="Musculoskeletal (MSK) Screening">Musculoskeletal (MSK) Screening</option>
+                                            <option value="Home Visit for Physiotherapy">Home Visit for Physiotherapy</option>
+                                            <option value="Sports Massage Therapy">Sports Massage Therapy</option>
                                         </select>                                        
                                     </div>
                                     <div class="col-xl-6">
-                                        <select class="form-select py-3 border-primary bg-transparent" aria-label="Default select example">
+                                        <select name="branch" class="form-select py-3 border-primary bg-transparent" aria-label="Default select example" required>
                                             <option selected>Preferred Branch</option>
-                                            <option value="1">Dadar</option>
-                                            <option value="2">Bandra</option>
-                                            <option value="3">Thane</option>
+                                            <option value="Dadar">Dadar</option>
+                                            <option value="Bandra">Bandra</option>
+                                            <option value="Thane">Thane</option>
                                         </select>                                        
                                     </div>
                                     <!-- <div class="col-12">
                                         <textarea class="form-control border-primary bg-transparent text-white" name="text" id="area-text" cols="30" rows="5" placeholder="Write Comments"></textarea>
                                     </div> -->
                                     <div class="col-12">
-                                        <button type="button" class="btn btn-primary text-white w-100 py-3 px-5">SUBMIT NOW</button>
+                                        <button type="submit" class="btn btn-primary text-white w-100 py-3 px-5" id="submit-btn">SUBMIT NOW</button>
                                     </div>
                                 </div>
                             </form>
@@ -320,6 +321,33 @@
         <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
 
         
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+  // Initialize EmailJS with your Public Key
+  (function () {
+    emailjs.init("EMAIL_PUBLIC_KEY"); //Public Key
+  })();
+
+  // Form submission
+  const form = document.getElementById("appointment-form-data");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    emailjs.sendForm("EMAIL_SERVICE_ID", "EMAIL_TEMPLATE_ID", this)  //Service ID and Template ID
+      .then(function () {
+        alert("✅ Appointment request sent successfully!");
+        form.reset();
+      }, function (error) {
+        alert("❌ Failed to send: " + JSON.stringify(error));
+      });
+  });
+</script>
+
+
         <!-- JavaScript Libraries -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>

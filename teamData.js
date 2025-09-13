@@ -144,5 +144,17 @@ const modalData = [
     location: "Mumbai, LiveActive Physiotherapy Clinic",
     linkedin: "#"
   },
+  {
+    id: "deshnaModal",
+    name: "Deshna Shah",
+    title: "Consultant Physiotherapist",
+    image: "img/staff/Deshna.png",
+    qualifications: "BPTh (YMT, Navi Mumbai)",
+    experience: "1+ years of experience in orthopedic and sports rehab.",
+    specializations: "Knee & Shoulder Injuries, Strength Training, Post-op Rehab.",
+    approach: "Patient-centric and movement-based therapy.",
+    location: "Mumbai, LiveActive Physiotherapy Clinic",
+    linkedin: "https://www.linkedin.com/in/deshna-shah-pt-11bb3a212?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+  },
   
 ];

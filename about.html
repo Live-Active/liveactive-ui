@@ -103,72 +103,102 @@
 
         /* assoc */
         .map-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 80px 20px;
-    font-family: 'Segoe UI', sans-serif;
-    text-align: center;
-  }
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+        }
 
-  .map-title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 30px;
-    animation: fadeIn 0.6s ease-in-out forwards;
-  }
+        .map-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            animation: fadeIn 0.6s ease-in-out forwards;
+        }
 
-  .map-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-  }
+        .map-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
 
-  .map-card {
-    background-color: #fff;
-    border-left: 5px solid #999;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    text-align: left;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: slideIn 0.8s ease forwards;
-  }
+        .map-card {
+            background-color: #fff;
+            border-left: 5px solid #999;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            text-align: left;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideIn 0.8s ease forwards;
+        }
 
-  .map-card:nth-child(1) { border-color: #a05fc6; animation-delay: 0.2s; }
-  .map-card:nth-child(2) { border-color: #e74c3c; animation-delay: 0.4s; }
-  .map-card:nth-child(3) { border-color: #f5c518; animation-delay: 0.6s; }
-  .map-card:nth-child(4) { border-color: #5a9bd5; animation-delay: 0.8s; }
-  .map-card:nth-child(5) { border-color: #8cc63f; animation-delay: 1s; }
-  .map-card:nth-child(6) { border-color: #2ecc71; animation-delay: 1.2s; }
+        .map-card:nth-child(1) {
+            border-color: #a05fc6;
+            animation-delay: 0.2s;
+        }
 
-  .map-card h4 {
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-    font-weight: 600;
-  }
+        .map-card:nth-child(2) {
+            border-color: #e74c3c;
+            animation-delay: 0.4s;
+        }
 
-  .map-card ul {
-    padding-left: 18px;
-    margin: 0;
-  }
+        .map-card:nth-child(3) {
+            border-color: #f5c518;
+            animation-delay: 0.6s;
+        }
 
-  .map-card li {
-    font-size: 0.95rem;
-    margin-bottom: 4px;
-  }
+        .map-card:nth-child(4) {
+            border-color: #5a9bd5;
+            animation-delay: 0.8s;
+        }
 
-  @keyframes slideIn {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+        .map-card:nth-child(5) {
+            border-color: #8cc63f;
+            animation-delay: 1s;
+        }
 
-  @keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(-20px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
+        .map-card:nth-child(6) {
+            border-color: #2ecc71;
+            animation-delay: 1.2s;
+        }
+
+        .map-card h4 {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .map-card ul {
+            padding-left: 18px;
+            margin: 0;
+        }
+
+        .map-card li {
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 
@@ -356,7 +386,8 @@
                     <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
                         <div class="team-img rounded-top h-100">
                             <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
-                            <img src="img/staff/Anuja.jpg" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+                            <img src="img/staff/Anuja.jpg" class="img-fluid rounded-top w-100"
+                                style="height: 250px; object-fit: cover;">
                             <div class="team-icon d-flex justify-content-center">
                                 <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
                                         class="fab fa-facebook-f"></i></a>
@@ -390,8 +421,8 @@
                     <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
                         <div class="team-img rounded-top h-100">
                             <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
-                            <img src="img/staff/niranjan.jpg"
-                                class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+                            <img src="img/staff/niranjan.jpg" class="img-fluid rounded-top w-100"
+                                style="height: 250px; object-fit: cover;">
                             <div class="team-icon d-flex justify-content-center">
                                 <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
                                         class="fab fa-facebook-f"></i></a>
@@ -423,7 +454,8 @@
                     <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
                         <div class="team-img rounded-top h-100">
                             <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
-                            <img src="/img/staff/Devika.png" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+                            <img src="/img/staff/Devika.png" class="img-fluid rounded-top w-100"
+                                style="height: 250px; object-fit: cover;">
                             <div class="team-icon d-flex justify-content-center">
                                 <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
                                         class="fab fa-facebook-f"></i></a>
@@ -451,7 +483,8 @@
                     <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
                         <div class="team-img rounded-top h-100">
                             <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
-                            <img src="img/staff/Stuti.png" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+                            <img src="img/staff/Stuti.png" class="img-fluid rounded-top w-100"
+                                style="height: 250px; object-fit: cover;">
                             <div class="team-icon d-flex justify-content-center">
                                 <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
                                         class="fab fa-facebook-f"></i></a>
@@ -478,7 +511,8 @@
                     <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
                         <div class="team-img rounded-top h-100">
                             <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
-                            <img src="img/staff/Parita.png" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+                            <img src="img/staff/Parita.png" class="img-fluid rounded-top w-100"
+                                style="height: 250px; object-fit: cover;">
                             <div class="team-icon d-flex justify-content-center">
                                 <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
                                         class="fab fa-facebook-f"></i></a>
@@ -506,7 +540,8 @@
                     <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
                         <div class="team-img rounded-top h-100">
                             <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
-                            <img src="img/staff/Senthil.png" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+                            <img src="img/staff/Senthil.png" class="img-fluid rounded-top w-100"
+                                style="height: 250px; object-fit: cover;">
                             <div class="team-icon d-flex justify-content-center">
                                 <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
                                         class="fab fa-facebook-f"></i></a>
@@ -535,7 +570,8 @@
                     <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
                         <div class="team-img rounded-top h-100">
                             <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
-                            <img src="img/staff/Ansh.png" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+                            <img src="img/staff/Ansh.png" class="img-fluid rounded-top w-100"
+                                style="height: 250px; object-fit: cover;">
                             <div class="team-icon d-flex justify-content-center">
                                 <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
                                         class="fab fa-facebook-f"></i></a>
@@ -566,7 +602,8 @@
                     <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
                         <div class="team-img rounded-top h-100">
                             <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
-                            <img src="img/staff/Amogh.png" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+                            <img src="img/staff/Amogh.png" class="img-fluid rounded-top w-100"
+                                style="height: 270px; object-fit: cover;">
                             <div class="team-icon d-flex justify-content-center">
                                 <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
                                         class="fab fa-facebook-f"></i></a>
@@ -601,7 +638,7 @@
                         <div class="team-img rounded-top h-100">
                             <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
                             <img src="data:image/jpeg;base64,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"
-                                class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+                                class="img-fluid rounded-top w-100" style="height: 250px; object-fit: cover;">
                             <div class="team-icon d-flex justify-content-center">
                                 <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
                                         class="fab fa-facebook-f"></i></a>
@@ -630,7 +667,8 @@
                     <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
                         <div class="team-img rounded-top h-100">
                             <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
-                            <img src="/img/staff/Rahul.png" class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+                            <img src="/img/staff/Rahul.png" class="img-fluid rounded-top w-100"
+                                style="height: 250px; object-fit: cover;">
                             <div class="team-icon d-flex justify-content-center">
                                 <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
                                         class="fab fa-facebook-f"></i></a>
@@ -659,8 +697,8 @@
                     <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
                         <div class="team-img rounded-top h-100">
                             <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
-                            <img src="/img/staff/Khushboo.png"
-                                class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+                            <img src="/img/staff/Khushboo.png" class="img-fluid rounded-top w-100"
+                                style="height: 250px; object-fit: cover;">
                             <div class="team-icon d-flex justify-content-center">
                                 <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
                                         class="fab fa-facebook-f"></i></a>
@@ -688,8 +726,8 @@
                     <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
                         <div class="team-img rounded-top h-100">
                             <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
-                            <img src="/img/staff/Ratnesh.png"
-                                class="img-fluid rounded-top w-100 h-100 object-fit-cover">
+                            <img src="/img/staff/Ratnesh.png" class="img-fluid rounded-top w-100"
+                                style="height: 250px; object-fit: cover;">
                             <div class="team-icon d-flex justify-content-center">
                                 <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
                                         class="fab fa-facebook-f"></i></a>
@@ -705,6 +743,35 @@
                             <h5>Ratnesh Jathar</h5>
                             <p class="mb-0">Physiotherapist</p>
                             <button class="btn-modern-glass" data-bs-toggle="modal" data-bs-target="#ratneshModal">
+                                <i class="fas fa-user-md me-2"></i>
+                                View Profile
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item rounded" style="max-width: 250px; margin: 0 auto;">
+                        <div class="team-img rounded-top h-100">
+                            <!-- <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt=""> -->
+                            <img src="/img/staff/Deshna.png" class="img-fluid rounded-top w-100"
+                                style="height: 250px; object-fit: cover;">
+                            <div class="team-icon d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
+                            <h5>Deshna Shah</h5>
+                            <p class="mb-0">Physiotherapist</p>
+                            <button class="btn-modern-glass" data-bs-toggle="modal" data-bs-target="#deshnaModal">
                                 <i class="fas fa-user-md me-2"></i>
                                 View Profile
                             </button>
@@ -746,7 +813,7 @@
                 <p><strong>Specializations:</strong> ${member.specializations}</p>
                 <p><strong>Approach:</strong> ${member.approach}</p>
                 <p><strong>Location:</strong> ${member.location}</p>
-                <p><strong>LinkedIn:</strong> <a href="${member.linkedin}" target="_blank">${member.linkedin}</a></p>
+                <p><strong>LinkedIn:</strong> <a href="${member.linkedin}" target="_blank">Visit</a></p>
               </div>
             </div>
           </div>
@@ -777,17 +844,18 @@
                     recurrence, and help you live an active life.</p>
             </div>
             <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="row-cols-1 feature-item p-4">
+
+                <!-- Card 1 -->
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp d-flex" data-wow-delay="0.1s">
+                    <div class="row-cols-1 feature-item p-4 w-100"
+                        style="display:flex;flex-direction:column;justify-content:space-between;min-height:320px;border:1px solid #ddd;border-radius:10px;">
                         <div class="col-12">
                             <div class="feature-icon mb-4">
                                 <div class="p-3 d-inline-flex bg-white rounded">
-                                    <!-- <i class="fas fa-diagnoses fa-4x text-primary"></i> -->
-                                    <!-- <i class="fa-solid fa-user-doctor fa-4x text-primary"></i> -->
                                     <i class="fas fa-user-md fa-4x text-primary"></i>
                                 </div>
                             </div>
-                            <div class="feature-content d-flex flex-column">
+                            <div class="feature-content d-flex flex-column" style="flex-grow:1;">
                                 <h5 class="mb-4">Licensed Therapist</h5>
                                 <p class="mb-0">Our certified therapists provide expert guidance to support your mental
                                     and emotional well-being.</p>
@@ -795,15 +863,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="row-cols-1 feature-item p-4">
+
+                <!-- Card 2 -->
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp d-flex" data-wow-delay="0.3s">
+                    <div class="row-cols-1 feature-item p-4 w-100"
+                        style="display:flex;flex-direction:column;justify-content:space-between;min-height:320px;border:1px solid #ddd;border-radius:10px;">
                         <div class="col-12">
                             <div class="feature-icon mb-4">
                                 <div class="p-3 d-inline-flex bg-white rounded">
                                     <i class="fas fa-briefcase-medical fa-4x text-primary"></i>
                                 </div>
                             </div>
-                            <div class="feature-content d-flex flex-column">
+                            <div class="feature-content d-flex flex-column" style="flex-grow:1;">
                                 <h5 class="mb-4">Personalized Treatment</h5>
                                 <p class="mb-0">We design customized treatment plans tailored to your specific needs for
                                     optimal results.</p>
@@ -811,15 +882,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="row-cols-1 feature-item p-4">
+
+                <!-- Card 3 -->
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp d-flex" data-wow-delay="0.5s">
+                    <div class="row-cols-1 feature-item p-4 w-100"
+                        style="display:flex;flex-direction:column;justify-content:space-between;min-height:320px;border:1px solid #ddd;border-radius:10px;">
                         <div class="col-12">
                             <div class="feature-icon mb-4">
                                 <div class="p-3 d-inline-flex bg-white rounded">
                                     <i class="fas fa-hospital-user fa-4x text-primary"></i>
                                 </div>
                             </div>
-                            <div class="feature-content d-flex flex-column">
+                            <div class="feature-content d-flex flex-column" style="flex-grow:1;">
                                 <h5 class="mb-4">Advanced Equipments</h5>
                                 <p class="mb-0">Leverage state-of-the-art tools and technology to track progress,
                                     enhance recovery, and elevate athletic output.</p>
@@ -827,15 +901,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="row-cols-1 feature-item p-4">
+
+                <!-- Card 4 -->
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp d-flex" data-wow-delay="0.7s">
+                    <div class="row-cols-1 feature-item p-4 w-100"
+                        style="display:flex;flex-direction:column;justify-content:space-between;min-height:320px;border:1px solid #ddd;border-radius:10px;">
                         <div class="col-12">
                             <div class="feature-icon mb-4">
                                 <div class="p-3 d-inline-flex bg-white rounded">
                                     <i class="fas fa-users fa-4x text-primary"></i>
                                 </div>
                             </div>
-                            <div class="feature-content d-flex flex-column">
+                            <div class="feature-content d-flex flex-column" style="flex-grow:1;">
                                 <h5 class="mb-4">Practitioners Network</h5>
                                 <p class="mb-0">Train smarter and recover faster with cutting-edge equipment designed to
                                     support strength, mobility, and peak athletic performance.</p>
@@ -843,18 +920,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="row-cols-1 feature-item p-4">
+
+                <!-- Card 5 -->
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp d-flex" data-wow-delay="0.1s">
+                    <div class="row-cols-1 feature-item p-4 w-100"
+                        style="display:flex;flex-direction:column;justify-content:space-between;min-height:320px;border:1px solid #ddd;border-radius:10px;">
                         <div class="col-12">
                             <div class="feature-icon mb-4">
                                 <div class="p-3 d-inline-flex bg-white rounded">
-                                    <!-- <i class="fas fa-spa fa-4x text-primary"></i> -->
                                     <img src="https://i.fbcd.co/products/resized/resized-750-500/13-008e4cdb16f6798da40e27462822384f6084326d12f6ee8ab4f4766f81df69fb.jpg"
                                         height="80px" width="120px">
-                                    <!-- <img src="./img/center.png" height="80px" width="60px"> -->
                                 </div>
                             </div>
-                            <div class="feature-content d-flex flex-column">
+                            <div class="feature-content d-flex flex-column" style="flex-grow:1;">
                                 <h5 class="mb-4">Comfort-Driven Recovery Space</h5>
                                 <p class="mb-0">Train and recover in a modern, athlete-focused environment built for
                                     comfort, focus, and peak rehabilitation outcomes.</p>
@@ -862,15 +940,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="row-cols-1 feature-item p-4">
+
+                <!-- Card 6 -->
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp d-flex" data-wow-delay="0.3s">
+                    <div class="row-cols-1 feature-item p-4 w-100"
+                        style="display:flex;flex-direction:column;justify-content:space-between;min-height:320px;border:1px solid #ddd;border-radius:10px;">
                         <div class="col-12">
                             <div class="feature-icon mb-4">
                                 <div class="p-3 d-inline-flex bg-white rounded">
                                     <i class="fas fa-heart fa-4x text-primary"></i>
                                 </div>
                             </div>
-                            <div class="feature-content d-flex flex-column">
+                            <div class="feature-content d-flex flex-column" style="flex-grow:1;">
                                 <h5 class="mb-4">Evidence-Based Practice</h5>
                                 <p class="mb-0">We incorporate a holistic approach to healing, combining traditional and
                                     modern therapy techniques.</p>
@@ -878,17 +959,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="row-cols-1 feature-item p-4">
+
+                <!-- Card 7 -->
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp d-flex" data-wow-delay="0.5s">
+                    <div class="row-cols-1 feature-item p-4 w-100"
+                        style="display:flex;flex-direction:column;justify-content:space-between;min-height:320px;border:1px solid #ddd;border-radius:10px;">
                         <div class="col-12">
                             <div class="feature-icon mb-4">
                                 <div class="p-3 d-inline-flex bg-white rounded">
-                                    <!-- <i class="fab fa-pied-piper fa-4x text-primary"></i> -->
                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfODzDfGaPQuh7mON1VW1VZI3xqPxqUZcycA&s"
                                         alt="" height="60px" width="70px">
                                 </div>
                             </div>
-                            <div class="feature-content d-flex flex-column">
+                            <div class="feature-content d-flex flex-column" style="flex-grow:1;">
                                 <h5 class="mb-4">Postural & Ergonomic</h5>
                                 <p class="mb-0">Boost performance and prevent injury with expert postural analysis and
                                     ergonomic training designed to enhance movement efficiency and alignment.</p>
@@ -896,15 +979,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="row-cols-1 feature-item p-4">
+
+                <!-- Card 8 -->
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp d-flex" data-wow-delay="0.7s">
+                    <div class="row-cols-1 feature-item p-4 w-100"
+                        style="display:flex;flex-direction:column;justify-content:space-between;min-height:320px;border:1px solid #ddd;border-radius:10px;">
                         <div class="col-12">
                             <div class="feature-icon mb-4">
                                 <div class="p-3 d-inline-flex bg-white rounded">
                                     <i class="fas fa-user-md fa-4x text-primary"></i>
                                 </div>
                             </div>
-                            <div class="feature-content d-flex flex-column">
+                            <div class="feature-content d-flex flex-column" style="flex-grow:1;">
                                 <h5 class="mb-4">Injury Prevention Programs</h5>
                                 <p class="mb-0">Enhance your body’s resilience with proactive programs that focus on
                                     biomechanics, posture, and safe movement strategies to reduce injury risk.</p>
@@ -912,6 +998,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Button -->
                 <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
                     <a href="#" class="btn btn-primary rounded-pill text-white py-3 px-5">More Details</a>
                 </div>
@@ -920,87 +1008,101 @@
     </div>
 
     <!-- Sports Associations and Competitions Section -->
+
+
+    <div class="map-wrapper">
+        <!-- <div class="container py-5">
+            <div class="text-center mb-4 wow fadeInUp" data-wow-delay="0.2s">
+                <h2 class="display-6 fw-bold">Our Sports & Fitness Network</h2>
+                <p class="text-muted mb-4">
+                    We are inspired by leading associations, leagues, and fitness initiatives that shape global sports
+                    and wellness.
+                </p>
+            </div>
+            <div class="map-grid">
+                <div class="map-card wow fadeInUp" data-wow-delay="0.3s">
+                    <h4>
+                        <img src="https://www.shutterstock.com/image-vector/sport-cricket-indian-premier-league-600nw-2051585033.jpg"
+                            alt="Cricket" style="height: 100px; margin-right: 8px; vertical-align: middle;">
+                        Cricket
+                    </h4>
+                    <ul>
+                        <li>Rajasthan Royals</li>
+                        <li>Punjab Kings</li>
+                        <li>UP Warriorz</li>
+                        <li>National Cricket Academy</li>
+                        <li>Mumbai Cricket Association</li>
+                        <li>Bangladesh Cricket Association</li>
+                        <li>Bangladesh Premier League</li>
+                        <li>Indian Street Premier League</li>
+                        <li>Master’s Champion's League</li>
+                        <li>Fairbreak Competition</li>
+                    </ul>
+                </div>
+                <div class="map-card wow fadeInUp" data-wow-delay="0.4s">
+                    <h4>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3j5y81eWvDbJQIHemr17cb17WGkQcFSK-FJgyCHiqJI2Tbj8ez_0geREUqDaRTcS8KtM&usqp=CAU"
+                            alt="Tennis" style="height: 100px; margin-right: 8px; vertical-align: middle;">
+                        Tennis
+                    </h4>
+                    <ul>
+                        <li>International Tennis Federation</li>
+                        <li>Maharashtra Lawn Tennis Association</li>
+                        <li>Champion's Tennis League</li>
+                    </ul>
+                </div>
+                <div class="map-card wow fadeInUp" data-wow-delay="0.5s">
+                    <h4>
+                        <img src="https://t4.ftcdn.net/jpg/14/59/30/47/240_F_1459304724_CIdkfiew8COG1zUL80ycNLEnwOfHqRJS.jpg"
+                            alt="Tennis" style="height: 80px; margin-right: 8px; vertical-align: middle;"> Kabaddi
+                    </h4>
+                    <ul>
+                        <li>Pro-Kabaddi League</li>
+                        <li>Puneri Paltan</li>
+                    </ul>
+                </div>
+                <div class="map-card wow fadeInUp" data-wow-delay="0.6s">
+                    <h4>
+                        <img src="https://i.pinimg.com/736x/1a/3c/89/1a3c89034f8940e3a6698924b4dd7e2e.jpg" alt="Tennis"
+                            style="height: 100px; margin-right: 8px; vertical-align: middle;"> Kabaddi
+                    </h4>
+                    Badminton</h4>
+                    <ul>
+                        <li>Sayyad Modi Indian Open</li>
+                        <li>Swiss Open</li>
+                        <li>Indonesia Open</li>
+                        <li>Singapore Open</li>
+                    </ul>
+                </div>
+                <div class="map-card wow fadeInUp" data-wow-delay="0.7s">
+                    <h4>
+                        <img src="https://static.vecteezy.com/system/resources/previews/014/321/483/non_2x/running-icon-illustration-symbol-vector.jpg"
+                            alt="Tennis" style="height: 100px; margin-right: 8px; vertical-align: middle;">
+                        Fitness Projects
+                    </h4>
+                    <ul>
+                        <li>Sisters in Sweat</li>
+                        <li>Pratham</li>
+                    </ul>
+                </div>
+                <div class="map-card wow fadeInUp" data-wow-delay="0.8s">
+                    <h4>
+                        <img src="https://static.vecteezy.com/system/resources/previews/006/511/871/non_2x/man-runs-and-holds-olympic-flame-in-his-hands-character-in-flat-style-athlete-is-champion-vector.jpg"
+                            alt="Tennis" style="height: 85px; margin-right: 8px; vertical-align: middle;">
+                        Olympic & Paraolympic
+                    </h4>
+                    <ul>
+                        <li>GoSports Foundation</li>
+                        <li>OGQ</li>
+                        <li>Lakshya Sports Foundation</li>
+                    </ul>
+                </div>
+            </div>
+        </div> -->
+     <img src="img/sports-associations.png" alt="Sports Associations" class="img-fluid" style="width: 100px; height: 200px;">
     
     
-<div class="map-wrapper">
-  <div class="container py-5">
-    <div class="text-center mb-4">
-      <h2 class="display-6 fw-bold">Our Sports & Fitness Network</h2>
-      <p class="text-muted mb-4">
-        We are inspired by leading associations, leagues, and fitness initiatives that shape global sports
-        and wellness.
-      </p>
     </div>
-    <div class="map-grid">
-      <div class="map-card">
-        <h4>
-                <img src="https://www.shutterstock.com/image-vector/sport-cricket-indian-premier-league-600nw-2051585033.jpg" alt="Cricket" style="height: 100px; margin-right: 8px; vertical-align: middle;">
-            Cricket</h4>
-        <ul>
-          <li>Rajasthan Royals</li>
-          <li>Punjab Kings</li>
-          <li>UP Warriorz</li>
-          <li>National Cricket Academy</li>
-          <li>Mumbai Cricket Association</li>
-          <li>Bangladesh Cricket Association</li>
-          <li>Bangladesh Premier League</li>
-          <li>Indian Street Premier League</li>
-          <li>Master’s Champion's League</li>
-          <li>Fairbreak Competition</li>
-        </ul>
-      </div>
-      <div class="map-card">
-        <h4>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3j5y81eWvDbJQIHemr17cb17WGkQcFSK-FJgyCHiqJI2Tbj8ez_0geREUqDaRTcS8KtM&usqp=CAU" alt="Tennis" style="height: 100px; margin-right: 8px; vertical-align: middle;">
-            <!-- <img src="https://t3.ftcdn.net/jpg/01/68/57/86/360_F_168578615_7dmBJwCXVQ2NE4loanM0QUlwAL8sdHFb.jpg" alt="Tennis" style="height: 60px; margin-right: 8px; vertical-align: middle;"> -->
-            Tennis</h4>
-        <ul>
-          <li>International Tennis Federation</li>
-          <li>Maharashtra Lawn Tennis Association</li>
-          <li>Champion's Tennis League</li>
-        </ul>
-      </div>
-      <div class="map-card">
-        <h4>
-            <img src="https://t4.ftcdn.net/jpg/14/59/30/47/240_F_1459304724_CIdkfiew8COG1zUL80ycNLEnwOfHqRJS.jpg" alt="Tennis" style="height: 80px; margin-right: 8px; vertical-align: middle;">            Kabaddi</h4>
-        <ul>
-          <li>Pro-Kabaddi League</li>
-          <li>Puneri Paltan</li>
-        </ul>
-      </div>
-      <div class="map-card">
-        <h4>
-            <img src="https://i.pinimg.com/736x/1a/3c/89/1a3c89034f8940e3a6698924b4dd7e2e.jpg" alt="Tennis" style="height: 100px; margin-right: 8px; vertical-align: middle;">            Kabaddi</h4>
-            Badminton</h4>
-        <ul>
-          <li>Sayyad Modi Indian Open</li>
-          <li>Swiss Open</li>
-          <li>Indonesia Open</li>
-          <li>Singapore Open</li>
-        </ul>
-      </div>
-      <div class="map-card">
-        <h4>
-            <img src="https://static.vecteezy.com/system/resources/previews/014/321/483/non_2x/running-icon-illustration-symbol-vector.jpg" alt="Tennis" style="height: 100px; margin-right: 8px; vertical-align: middle;">
-        Fitness Projects</h4>
-        <ul>
-          <li>Sisters in Sweat</li>
-          <li>Pratham</li>
-        </ul>
-      </div>
-      <div class="map-card">
-        <h4>
-            <img src="https://static.vecteezy.com/system/resources/previews/006/511/871/non_2x/man-runs-and-holds-olympic-flame-in-his-hands-character-in-flat-style-athlete-is-champion-vector.jpg" alt="Tennis" style="height: 85px; margin-right: 8px; vertical-align: middle;">
-            Olympic & Paraolympic</h4>
-        <ul>
-          <li>GoSports Foundation</li>
-          <li>OGQ</li>
-          <li>Lakshya Sports Foundation</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
 
 
     <!-- Footer Start -->
