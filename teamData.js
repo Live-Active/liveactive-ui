@@ -118,7 +118,7 @@ const modalData = [
     specializations: "Sports injuries, Strength Training, Pre & Post-op Rehab.",
     approach: "Patient-centric and movement-based therapy.",
     location: "Navy Mumbai, LiveActive Physiotherapy Clinic",
-    linkedin: "#"
+    linkedin: "https://www.linkedin.com/in/dr-rahul-zalte-pt-8a7a7a1b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
   },
   {
     id: "khushbooModal",
